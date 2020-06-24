@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         // Открытие файла
-        Scanner myValue = new Scanner(new File("C:\\Users\\Welest\\IdeaProjects\\LearningJava2\\src\\Lesson6\\file.txt"));
+        Scanner myValue = new Scanner(new File("C:\\Users\\Welest\\IdeaProjects\\LearningJava2\\src\\Lesson6\\file"));
         WorkWithWords Mwords = new WorkWithWords();
 
         while (myValue.hasNext()) {
