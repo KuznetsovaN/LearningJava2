@@ -1,9 +1,7 @@
 package Lesson8;
-
+import Lesson7.Calc;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
-
 
 public class CalcTests {
 
@@ -38,11 +36,12 @@ public class CalcTests {
     }
 
 
-    @Test
+    @Test(expected = ArithmeticException.class)
     public void DelenieChislaNaNol() {
         assertEquals("Деление на ноль выполняется некорректно!",  Double.POSITIVE_INFINITY, Calc.del(5, 0),0);
-    }
+        Lesson7.Calc calc = new Lesson7.Calc(5, 0);
 
+    }
 
     @Test
     public void DelenieNulaNaChislo() {
