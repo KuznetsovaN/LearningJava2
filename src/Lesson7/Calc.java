@@ -6,6 +6,8 @@
 package Lesson7;
 
 public class Calc {
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m";
     /**
      * * Атрибуты класса:
      * Дробное число firstNumber - первое число для операции
@@ -123,6 +125,14 @@ public class Calc {
 
 
     public double del() {
+
+            //При выполнение деления на 0 появляется предупреждение
+            if (getSecondNumber() == 0) {
+                throw new ArithmeticException(ANSI_RED + "На ноль делить нельзя!" + ANSI_RESET);
+            }
+
         return getFirstNumber() / getSecondNumber();
     }
+
+
 }

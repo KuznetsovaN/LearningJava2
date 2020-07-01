@@ -63,19 +63,24 @@ public class Main {
                             System.out.printf("\n%.4f * %.4f = %.4f\n\n",
                                     myCalculator.getFirstNumber(), myCalculator.getSecondNumber(), myCalculator.umn(a,b));
                             break;
+/**
                         case 4:
                             try {
-                                //При выполнение деления на 0 появляется предупреждение
-                                if (secondNumber == 0) {
-                                    throw new ArithmeticException(ANSI_RED + "На ноль делить нельзя!" + ANSI_RESET);
-                                } else
-                                    //При выборе "4" вызывается метод деления чисел Calculator.del() и выводится результат
-                                    System.out.printf("\n%.4f / %.4f = %.4f\n\n",
-                                            myCalculator.getFirstNumber(), myCalculator.getSecondNumber(), myCalculator.del(a,b));
-                            } catch (ArithmeticException ex) {
+                                //При выборе "4" вызывается метод деления чисел Calculator.del() и выводится результат
+                                System.out.printf("\n%.4f / %.4f = %.4f\n\n",
+                                        myCalculator.getFirstNumber(), myCalculator.getSecondNumber(), myCalculator.del(a,b));
+                            }
+                            catch (ArithmeticException ex) {
                                 System.out.println(ex.getMessage());
                             }
+                            break; */
+
+                        case 4:
+                            //При выборе "4" вызывается метод деления чисел Calculator.del() и выводится результат
+                            System.out.printf("\n%.4f / %.4f = %.4f\n\n",
+                                    myCalculator.getFirstNumber(), myCalculator.getSecondNumber(), myCalculator.del(a,b));
                             break;
+
                         case 5:
                             //При выборе "5" происходит выход из модуля
                             System.out.println("\nВыход из программы...\n");

@@ -3,7 +3,7 @@ package Lesson8;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
+
 
 public class CalcTests {
 
@@ -40,7 +40,7 @@ public class CalcTests {
 
     @Test
     public void DelenieChislaNaNol() {
-        assertSame("Деление на ноль выполняется некорректно!", "Infinity", Calc.del(5, 0)); // при обрабботки выдает ошибку, но в чем разница?
+        assertEquals("Деление на ноль выполняется некорректно!",  Double.POSITIVE_INFINITY, Calc.del(5, 0),0);
     }
 
 

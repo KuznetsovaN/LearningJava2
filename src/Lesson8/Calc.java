@@ -6,6 +6,8 @@ package Lesson8;
  */
 
 public class Calc {
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m";
     private static double firstNumber;
     private static double secondNumber;
     /**
@@ -97,7 +99,19 @@ public class Calc {
      * @return Результат деления двух чисел
      */
 
+/**
     public static double del(double a, double b) {
+
+        //При выполнение деления на 0 появляется предупреждение
+        if (b == 0) {
+            throw new ArithmeticException(ANSI_RED + "На ноль делить нельзя!" + ANSI_RESET);
+        }
+
         return a/b;
-    }
+    } */
+
+public static double del(double a, double b)
+{  return a/b;}
+
+
 }
